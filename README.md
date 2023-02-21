@@ -11,7 +11,7 @@ This is a community plugin for the [Obsidian](https://obsidian.md/) note-taking 
 
 ## Usage
 
-To use this plugin, you can install it from within Obsidian by going to **Settings > Third-party plugins** and searching for "Browser Tabs". You can also download the latest release from the [GitHub repository](https://github.com/myers-jacobandrew/obsidian-browser-tabs) and manually install it by placing the `main.js` and `manifest.json` files in your Obsidian plugins folder.
+To use this plugin, you can install it from within Obsidian by going to **Settings > Third-party plugins** and searching for "Browser Tabs". You can also download the latest release from this [GitHub repository](https://github.com/myers-jacobandrew/obsidian-browser-tabs) and manually install it by placing the `main.js` and `manifest.json` files in your Obsidian plugins folder.
 
 Once the plugin is installed and enabled, you can create tab groups from the command palette (`Ctrl/Cmd + P`), or by right-clicking on a workspace leaf and selecting **Add to tab group** from the context menu. You can also remove a leaf from a tab group by selecting **Remove from tab group** from the context menu.
 
