@@ -1,8 +1,100 @@
-/*
+/* Show title on unpinned tabs */
+.workspace-tab-header.mod-pinned:hover .workspace-tab-header-inner-title {
+    display: block;
+  }
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+body {
+  background-color: red;
+}
 
-If your plugin does not need CSS, delete this file.
+  /* Change pinned tab style only if tab is active */
+  .workspace-tab-header.mod-pinned.workspace-tab-header-active .workspace-tab-header-inner:before {
+    background: var(--interactive-normal);
+  }
+  
+  /* Add space for the pinned tab circle */
+  .workspace-tab-header.mod-pinned .workspace-tab-header-inner {
+    margin-left: 6px;
+  }
+  
+  /* Adjust width of tab header and inner elements */
+  .workspace-tab-header:has(.workspace-tab-header-inner.mod-pinned) {
+    width: fit-content;
+    flex: 0 1 auto;
+  }
+  
+  .workspace-tab-header-inner:has(.mod-pinned) {
+    width: fit-content;
+  }
+  
+  /* Hide the status icons on pinned tabs */
+  .workspace-tab-header-inner-title:has(+ .workspace-tab-header-status-container > .mod-pinned) {
+    display: none;
+  }
+  
+/* Add a circular background to the pinned tab favicon */
+.workspace-tab-header.mod-pinned .workspace-tab-header-inner:before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-*/
+  /* Position the pinned tab favicon in the center of the circle */
+.workspace-tab-header.mod-pinned .workspace-tab-header-inner img {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .workspace-tab-header:has(.workspace-tab-header-inner .mod-pinned) {
+    width: fit-content;
+    flex: 0 1 auto;
+    order: -1;
+  }
+  .workspace-tab-header-inner:has(.mod-pinned) {
+    width: fit-content;
+    padding-top: 3px;
+  }
+  .workspace-tab-header-inner:has(.mod-pinned)::before {
+    content: "";
+    width: calc(24px - var(--icon-s-stroke-width));
+    height: calc(24px - var(--icon-s-stroke-width));
+    border: var(--icon-s-stroke-width) solid var(--tab-text-color-active);
+    border-radius: 50%;
+  }
+  .workspace-tab-header-inner-title:has(+ .workspace-tab-header-status-container > .mod-pinned) {
+    display: none;
+  }
+  .workspace-tab-header .mod-pinned {
+    padding: 0;
+  }
+  .workspace-tab-header .mod-pinned > svg {
+    display: none;
+  }
+
+.workspace-tab-header.mod-pinned .workspace-tab-header-inner:before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: url('favicon.png'); /* reference to the test image */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.workspace-tab-header.mod-pinned .workspace-tab-header-inner img {
+    display: none;
+}
