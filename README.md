@@ -1,6 +1,6 @@
 # Obsidian Browser Tabs
 
-This is a community plugin for the [Obsidian](https://obsidian.md/) note-taking app that enables browser-like tabs for workspace leafs.
+This is a community plugin for the [Obsidian](https://obsidian.md/) note-taking app that enables browser-like tabs for workspace leafs. My attempt at creating tab groups functionality similar to that of modern web browsers. This project is an unfinsihed WIP as I continue to research and adapt new techniques.
 
 ## Features
 
